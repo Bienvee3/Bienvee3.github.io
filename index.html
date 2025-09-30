@@ -1,313 +1,175 @@
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
+    
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, user-scalable=no,
-	 initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
-    <title>Bienvenido Doalto Cavada</title>
-    <link href="https://fonts.googleapis.com/css?family= Roboto & display = swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/font-awesome.min.css" />
-    <link rel="stylesheet" href="css/mdb.min.css" />
-    <link rel="stylesheet" href="css/estilos.css" />
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website</title>
 </head>
-
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container-fluid justify-content-center">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#acerca-de">Sobre mí</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#servicio">Habilidades</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#educacion">Educación</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Proyectos">Proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contacto">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <header>
-        <div class="contenedor">
-            <div class="contenedor-texto">
-                <div class="texto">
-                    <h1 class="nombre">Hola soy</h1>
-                    <h2 class="profesion">Bienvenido Doalto</h2>
-                </div>
-            </div>
-        </div>
+        <a href="#" class="logo">Bienvenido Doalto</a>
+
+        <nav>
+            <a href="#" class="active"> Home</a>
+            <a href="#services">Servicios</a>
+            <a href="#skills">Habilidades</a>
+            <a href="#" >Educación</a>
+            <a href="#experience" >Experiencia</a>
+            <a href="#contacto" >Contacto</a>
+        </nav>
     </header>
-
-    <section class="main">
-        <!-- Tarjeta de Presentación -->
-        <section class="acerca-de" id="acerca-de">
-            <div class="contenedor">
-                <div class="foto card border-light mb-3" style="max-width: 1140px;">
-                    <div class="row no-gutters">
-                        <div class="target col-md-8">
-                            <div class="card-body">
-                                <h5 class="text-left titulo">Sobre mi</h5>
-                                <p class="descripcion">
-                                    Me alegro de conocerte, soy un <strong>estudiante de segundo año de Ingeniería Informática para la Universidad Europea del Atlántico</strong>. 
-                                    Me apasiona el <strong>aprendizaje constante</strong> y estoy siempre buscando nuevas maneras de ampliar mis habilidades en <strong>desarrollo web, estructuras de datos, POO,</strong> entre otros.
-                                </p>
-                                <p class="descripcion">
-                                    Una persona <strong>competitiva y ambiciosa</strong> con un alto nivel de responsabilidad y compromiso. Amante de los deportes y videojuegos en equipo también.
-                                    Busco oportunidades para poner en práctica mis conocimientos y colaborar en proyectos reales que me permitan crecer como desarrollador. Estoy abierto a colaborar en <strong>proyectos de código abierto, prácticas profesionales</strong> y cualquier iniciativa que me ayude a ganar experiencia en este campo.
-                                </p>
-                            </div>
-
-                            <div class="text-left card-footer bg-transparent border-light">
-                                <a class="btn btn-primary btn-floating" style="background: linear-gradient(317deg,#FF0000, #FF6347)" href="https://twitter.com/Bienvee3" role="button"><i class="fab fa-twitter"></i></a>
-                                <a class="btn btn-primary btn-floating" style="background: linear-gradient(317deg,#FFB894, #D20B54)" href="https://www.instagram.com/bienvedc.3" role="button"><i class="fab fa-instagram"></i></a>
-                                <a class="btn btn-primary btn-floating" style="background: linear-gradient(317deg,#FF0000, #FF6347)" href="https://www.linkedin.com/in/bienvenidodoalto" role="button"><i class="fab fa-linkedin"></i></a>
-                                <a class="btn btn-primary btn-floating" style="background: linear-gradient(317deg,#5E2563, #65799B)" href="https://github.com/Bienvee3" role="button"><i class="fab fa-github"></i></a>
-                            </div>
-                        </div>
-                        <div class="target col-md-4">
-                            <img src="img/foto.jpg" class="card-img" alt="..." />
-                        </div>
-                    </div>
+    <section class="home">
+        <div class="home-img">
+            <img src="main.jpg" alt="">
+        </div>
+        <div class="home-content">
+            <h1>Hi, It's <span>Bienve</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>Soy un estudiante de segundo año de <strong>Ingeniería Informática para la Universidad Europea del Atlántico</strong>. Me apasiona el <strong>aprendizaje constante</strong> y estoy siempre buscando nuevas maneras de <strong>ampliar mis habilidades en desarrollo web, estructuras de datos, POO,</strong> entre otros.</p>
+            <br>
+            <p>Una persona <strong>competitiva y ambiciosa</strong> con un alto nivel de <strong>responsabilidad y compromiso</strong>. Amante de los <strong>deportes</strong> y <strong>videojuegos en equipo</strong> también. Busco oportunidades para poner en práctica mis conocimientos y colaborar en proyectos reales que me permitan crecer como desarrollador.</p>
+            <br>
+            <p>Estoy emocionado por lo que el futuro me depara en el campo de la informática y estoy listo para enfrentar <strong>nuevos desafíos</strong> y contribuir con mi <strong>entusiasmo y dedicación</strong>.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/bienvenidodoalto"><i class="fa-brands fa-github"></i></a>
+                <a href="https://twitter.com/Bienvee3"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://www.instagram.com/bienvedc.3"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="#" class="btn">Hire me</a>
+        </div>
+    </section>
+    <!-- Sección de Servicios actualizada para reflejar lo que puedes ofrecer al terminar la carrera -->
+    <section class="services" id="services">
+        <div class="contenedor">
+            <h3 class="titulo">Servicios</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fa-solid fa-code" style="font-size: 3rem; color: #b74b4b;"></i>
+                    <h4>Desarrollo Web</h4>
+                    <p>Creación de sitios web modernos, responsivos y optimizados para un rendimiento eficiente.</p>
                 </div>
-            </div>
-        </section>
-
-        <!-- Habilidades -->
-        <section class="servicio" id="servicio">
-            <div class="contenido">
-                <h3 class="titulo">Habilidades</h3>
-            </div>
-
-            <div class="servicios">
-                <div class="row row-cols-1 row-cols-md-3 g-4">
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="img/habilidades/Desarrollo_web.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Desarrollo Web</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="img/habilidades/Diseño.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Diseño UI/UX</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="img/habilidades/marketing.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Marketing Digital</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="img/habilidades/soporte.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Soporte IT</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="img/habilidades/seguridad.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Seguridad Informática</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="card h-100">
-                            <img src="img/habilidades/multiplataforma.jpg" class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title text-center">Desarrollo Multiplataforma</h5>
-                            </div>
-                        </div>
-                    </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-database" style="font-size: 3rem; color: #b74b4b;"></i>
+                    <h4>Gestión de Bases de Datos</h4>
+                    <p>Diseño, implementación y mantenimiento de bases de datos para aplicaciones y sistemas.</p>
                 </div>
-            </div>
-
-        </section>
-
-        <!-- Conocimientos -->
-        <div class="conocimientos">
-
-
-            <div class="card">
-                <div class="card-body">
-                    <section class="trabajos">
-                        <div class="contenedor">
-                            <h3 class="titulo">Habilidades Técnicas</h3>
-                            <div class="row">
-                                <div class="col">
-                                    <div class="container">
-                                        <div class="skill">
-                                            <p>Adobe Photoshop</p>
-                                            <div class="skill-bar skill1">
-                                            </div>
-                                        </div>
-                                        <!-- skill 1-->
-                                        <div class="skill">
-                                            <p>HTML5</p>
-                                            <div class="skill-bar skill2">
-                                            </div>
-                                        </div>
-                                        <!-- skill 2-->
-                                        <div class="skill">
-                                            <p>Java</p>
-                                            <div class="skill-bar skill3">
-                                            </div>
-                                        </div>
-                                        <!-- skill 3-->
-                                        <div class="skill">
-                                            <p>Python</p>
-                                            <div class="skill-bar skill1">
-                                            </div>
-                                        </div>
-                                        <!-- skill 4-->
-                                        <div class="skill">
-                                            <p>C</p>
-                                            <div class="skill-bar skill5">
-                                            </div>
-                                        </div>
-                                        <!-- skill 5-->
-                                         <div class="skill">
-                                            <p>Linux</p>
-                                            <div class="skill-bar skill10">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="col">
-                                    <div class="container">
-                                        <div class="skill">
-                                            <p>C++</p>
-                                            <div class="skill-bar skill6">
-                                            </div>
-                                        </div>
-                                        <!-- skill 6-->
-                                        <div class="skill">
-                                            <p>CSS</p>
-                                            <div class="skill-bar skill7">
-                                            </div>
-                                        </div>
-                                        <!-- skill 7-->
-                                        <div class="skill">
-                                            <p>Javascript</p>
-                                            <div class="skill-bar skill8">
-                                            </div>
-                                        </div>
-                                        <!-- skill 8-->
-                                        <div class="skill">
-                                            <p>Scrum</p>
-                                            <div class="skill-bar skill9">
-                                            </div>
-                                        </div>
-                                        <!-- skill 9-->
-                                        <div class="skill">
-                                            <p>SQL</p>
-                                            <div class="skill-bar skill10">
-                                            </div>
-                                        </div>
-                                        <!-- skill 10-->
-                                         <div class="skill">
-                                            <p>Github</p>
-                                            <div class="skill-bar skill10">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </section>
+                <div class="service-card">
+                    <i class="fa-solid fa-cogs" style="font-size: 3rem; color: #b74b4b;"></i>
+                    <h4>Automatización de Procesos</h4>
+                    <p>Optimización de flujos de trabajo mediante scripts personalizados y herramientas como Python.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-network-wired" style="font-size: 3rem; color: #b74b4b;"></i>
+                    <h4>Administración de Redes</h4>
+                    <p>Configuración y mantenimiento de redes informáticas para garantizar su seguridad y eficiencia.</p>
+                </div>
+                <div class="service-card">
+                    <i class="fa-solid fa-shield-alt" style="font-size: 3rem; color: #b74b4b;"></i>
+                    <h4>Ciberseguridad Básica</h4>
+                    <p>Implementación de medidas de seguridad para proteger sistemas y datos frente a amenazas comunes.</p>
                 </div>
             </div>
         </div>
-
-
-        <!-- Proyectos -->
-        <section class="Proyectos" id="Proyectos">
-            <h3 class="titulo">Proyectos</h3>
-            <div class="contenedor">
-
-                <ul id="filters" class="clearfix">
-                    <li><span class="filter active" data-filter=".todo, .javascript, .java, .python, .sql,">Todo</span></li>
-                    <li><span class="filter" data-filter=".javascript">JavaScript</span></li>
-                    <li><span class="filter" data-filter=".java">Java</span></li>
-                    <li><span class="filter" data-filter=".python">Python</span></li>
-                    <li><span class="filter" data-filter=".sql">SQL</span></li>
-                </ul>
-
-                <div class="row row-cols-1 row-cols-md-4 g-4" id="portfoliolist">
-                    <div class="col portfolio card javascript python todo" data-cat="javascript python todo">
-                        <div class="card h-100" onclick="window.open('https://github.com/Bienvee3/Benchmarks-VM-vs-Docker', '_blank')" style="cursor: pointer;">
-                            <a href="#">
-                                <img src="img/Portafolio/snake.png" class="card-img-top" alt="...">
-                            </a>
-                            <div class="card-body text-center">
-                                <h5 class="card-title">Benchmark VM vs Docker <br>(Servidor Snake)
-                                    <a href="https://github.com/Bienvee3/Benchmarks-VM-vs-Docker" target="_blank">
-                                        <i class="fa-brands fa-square-github" style="font-size: 24px; margin-left: 10px;"></i>
-                                    </a>
-                                </h5>
-                                <span href="#" class="btn btn-outline-primary btn-sm">JavaScript</span>
-                                <span href="#" class="btn btn-outline-primary btn-sm">Python</span>
-                                <span href="#" class="btn btn-outline-primary btn-sm">Jupyter Notebook</span>
-                                <span href="#" class="btn btn-outline-primary btn-sm">Dockerfile</span>
-                                <span href="#" class="btn btn-outline-primary btn-sm">Shell</span>
-                                <span href="#" class="btn btn-outline-primary btn-sm">HTML</span>
-                            </div>
-                        </div>
+    </section>
+    <!-- Sección de Habilidades actualizada para que cada habilidad blanda e idioma esté en su propia tarjeta -->
+    <section class="skills" id="skills">
+        <div class="contenedor">
+            <h3 class="titulo">Habilidades</h3>
+            <div class="skills-grid">
+                <!-- Habilidades Técnicas -->
+                <div class="skill-card">
+                    <h4>Técnicas</h4>
+                    <ul>
+                        <li><i class="fa-brands fa-html5" style="font-size: 24px; color: #b74b4b;"></i> HTML5</li>
+                        <li><i class="fa-brands fa-css3-alt" style="font-size: 24px; color: #b74b4b;"></i> CSS</li>
+                        <li><i class="fa-brands fa-square-js" style="font-size: 24px; color: #b74b4b;"></i> JavaScript</li>
+                        <li><i class="fa-brands fa-java" style="font-size: 24px; color: #b74b4b;"></i> Java</li>
+                        <li><i class="fa-brands fa-python" style="font-size: 24px; color: #b74b4b;"></i> Python</li>
+                        <li><i class="fa-solid fa-database" style="font-size: 24px; color: #b74b4b;"></i> SQL</li>
+                        <li><i class="fa-brands fa-linux" style="font-size: 24px; color: #b74b4b;"></i> Linux</li>
+                        <li><i class="fa-brands fa-github" style="font-size: 24px; color: #b74b4b;"></i> GitHub</li>
+                        <li><i class="fa-solid fa-code" style="font-size: 24px; color: #b74b4b;"></i> C, C++</li>
+                        <li><i class="fa-solid fa-people-group" style="font-size: 24px; color: #b74b4b;"></i> Scrum</li>
+                    </ul>
+                </div>
+                <!-- Habilidades Blandas -->
+                <div class="skill-card">
+                    <h4>Blandas</h4>
+                    <ul>
+                        <li>Trabajo en equipo</li>
+                        <li>Comunicación efectiva</li>
+                        <li>Resolución de problemas</li>
+                        <li>Adaptabilidad</li>
+                        <li>Gestión del tiempo</li>
+                    </ul>
+                </div>
+                <!-- Idiomas -->
+                <div class="skill-card">
+                    <h4>Idiomas</h4>
+                    <ul>
+                        <li>Español (Nativo)</li>
+                        <li>Inglés (Nivel B2)</li>
+                        <li>Francés (Nivel B1)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="experience" id="experience">
+        <div class="contenedor">
+            <h3 class="titulo">Experience</h3>
+            <div class="projects-grid">
+                <div class="card" onclick="window.open('https://github.com/Bienvee3/Benchmarks-VM-vs-Docker', '_blank')">
+                    <img src="img/snake.png" alt="Benchmark VM vs Docker" style="width: 90%; border-radius: 10px; margin-bottom: 1rem;">
+                    <h5 style="font-size: 2rem; color: #b74b4b;">Benchmark VM vs Docker</h5>
+                    <p style="font-size: 1.2rem; color: white;">Servidor Snake</p>
+                    <div style="margin-top: 10px;">
+                        <span class="btn btn-outline-primary btn-sm" style="font-size: 1rem; color: #b74b4b; border: 1px solid #b74b4b; margin: 5px;">JavaScript</span>
+                        <span class="btn btn-outline-primary btn-sm" style="font-size: 1rem; color: #b74b4b; border: 1px solid #b74b4b; margin: 5px;">Python</span>
+                        <span class="btn btn-outline-primary btn-sm" style="font-size: 1rem; color: #b74b4b; border: 1px solid #b74b4b; margin: 5px;">Jupyter Notebook</span>
+                        <span class="btn btn-outline-primary btn-sm" style="font-size: 1rem; color: #b74b4b; border: 1px solid #b74b4b; margin: 5px;">Dockerfile</span>
+                        <span class="btn btn-outline-primary btn-sm" style="font-size: 1rem; color: #b74b4b; border: 1px solid #b74b4b; margin: 5px;">Shell</span>
+                        <span class="btn btn-outline-primary btn-sm" style="font-size: 1rem; color: #b74b4b; border: 1px solid #b74b4b; margin: 5px;">HTML</span>
+                    </div>
+                    <div style="margin-top: 10px;">
+                        <i class="fa-brands fa-square-github" style="font-size: 24px; margin-left: 10px;"></i>
                     </div>
                 </div>
-
+                <div class="card" onclick="window.open('https://github.com/Bienvee3/Project2', '_blank')">
+                    <img src="img/project2.png" alt="Project 2" style="width: 90%; border-radius: 10px; margin-bottom: 1rem;">
+                    <h5 style="font-size: 2rem; color: #b74b4b;">Project 2</h5>
+                    <p style="font-size: 1.2rem; color: white;">Descripción breve del proyecto 2</p>
+                </div>
+                <div class="card" onclick="window.open('https://github.com/Bienvee3/Project3', '_blank')">
+                    <img src="img/project3.png" alt="Project 3" style="width: 90%; border-radius: 10px; margin-bottom: 1rem;">
+                    <h5 style="font-size: 2rem; color: #b74b4b;">Project 3</h5>
+                    <p style="font-size: 1.2rem; color: white;">Descripción breve del proyecto 3</p>
+                </div>
             </div>
-        </section>
+        </div>
     </section>
-
-    <!-- Contacto -->
     <section class="contacto" id="contacto">
         <div class="contenedor">
-            <h3 class="titulo">Contacto</h3>
+            <h3 class="titulo">Contact</h3>
             <ul style="list-style: none; padding: 0;">
-                <li style="display: flex; align-items: center; font-size: 1.5em; margin-bottom: 10px;">
-                    <i class="fas fa-phone" style="margin-right: 10px;"></i>
-                    <strong>Teléfono:</strong> <a href="tel:+34693788191">+34 693788191</a>
+                <li style="display: flex; align-items: center; justify-content: center; font-size: 2em; margin-bottom: 20px;">
+                    <i class="fas fa-phone" style="margin-right: 15px;"></i>
+                    <strong>Teléfono:</strong>&nbsp;&nbsp;<a href="tel:+34693788191">+34 693788191</a>
                 </li>
-                <li style="display: flex; align-items: center; font-size: 1.5em; margin-bottom: 10px;">
-                    <i class="fas fa-envelope" style="margin-right: 10px;"></i>
-                    <strong>Email:</strong> <a href="mailto:bienvedoalto3@gmail.com">bienvedoalto3@gmail.com</a>
+                <li style="display: flex; align-items: center; justify-content: center; font-size: 2em; margin-bottom: 20px;">
+                    <i class="fas fa-envelope" style="margin-right: 15px;"></i>
+                    <strong>Email:</strong>&nbsp;&nbsp;<a href="mailto:bienvedoalto3@gmail.com">bienvedoalto3@gmail.com</a>
                 </li>
-                <li style="display: flex; align-items: center; font-size: 1.5em;">
-                    <i class="fab fa-linkedin" style="margin-right: 10px;"></i>
-                    <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/bienvenidodoalto" target="_blank">www.linkedin.com/in/bienvenidodoalto</a>
+                <li style="display: flex; align-items: center; justify-content: center; font-size: 2em;">
+                    <i class="fab fa-linkedin" style="margin-right: 15px;"></i>
+                    <strong>LinkedIn:</strong>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/bienvenidodoalto" target="_blank">www.linkedin.com/in/bienvenidodoalto</a>
                 </li>
             </ul>
         </div>
     </section>
-
     <footer class="footer section section-light">
         <div class="container">
             <p class="copyright text-center mb-0">
@@ -315,41 +177,5 @@
             </p>
         </div>
     </footer>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js" integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/" crossorigin="anonymous">
-    </script>
-
-    <script type="text/javascript" src="js/mdb.js"></script>
-    <script src="https://kit.fontawesome.com/629388bad9.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script type="text/javascript" src="js/mixitup.js"></script>
-
-    <script type="text/javascript">
-        $(function() {
-
-            var filterList = {
-
-                init: function() {
-                    $('#portfoliolist').mixItUp({
-                        selectors: {
-                            target: '.portfolio',
-                            filter: '.filter'
-                        },
-                        load: {
-                            filter: '.todo'
-                        }
-                    });
-
-                }
-
-            };
-
-            // Run the show!
-            filterList.init();
-
-
-        });
-    </script>
-
 </body>
-
 </html>
