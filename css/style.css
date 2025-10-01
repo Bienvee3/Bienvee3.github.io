@@ -385,6 +385,15 @@ span{
     margin-bottom: 1rem;
 }
 
+/* Añadido efecto de zoom para las imágenes dentro de las cards */
+.card img {
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
 .projects-grid .card h5 {
     color: #b74b4b;
     font-size: 2rem; /* Incrementé el tamaño del nombre */
@@ -527,4 +536,48 @@ span{
     font-size: 1.4rem;
     color: #b74b4b;
     margin: 0;
+}
+
+/* Añadido efecto de zoom para las imágenes dentro de las cards de educación */
+.education-grid .card img {
+    transition: transform 0.3s ease;
+}
+
+.education-grid .card:hover img {
+    transform: scale(1.1);
+}
+
+/* Añadido efecto interactivo para las cards de la sección de educación */
+.education-grid .card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Ajustar el ancho y alto de las cards de educación para que sean iguales */
+.education-grid .card {
+    width: 45%; /* Asegura que ambas cards tengan el mismo ancho */
+    height: 400px; /* Establecer una altura fija */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* Centrar contenido verticalmente */
+    overflow: hidden; /* Asegurar que el contenido no se desborde */
+}
+
+.education-grid .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #b74b4b;
+}
+
+.education-grid .card img {
+    max-width: 100%; /* Asegurar que las imágenes no excedan el ancho de la card */
+    max-height: 50%; /* Limitar la altura máxima de las imágenes */
+    object-fit: cover; /* Ajustar las imágenes para que se vean bien dentro del espacio asignado */
+}
+
+/* Ajustar el tamaño del texto en las cards de educación */
+.education-grid .card p {
+    font-size: 1.6rem; /* Incrementar el tamaño del texto */
+    color: white;
+    text-align: justify;
+    margin-top: 1rem;
 }
