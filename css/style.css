@@ -196,6 +196,10 @@ span{
     cursor: pointer;
 }
 
+.btn i{
+    margin-right: 0.6rem;
+}
+
 .btn:hover{
     transform: scale3d(1.03);
     background-color: #b74b4b;
