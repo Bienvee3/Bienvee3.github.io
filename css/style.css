@@ -12,6 +12,11 @@
 
 html{
     font-size: 62.5%;
+    scroll-behavior: smooth; /* Restablecer scroll suave */
+}
+
+:root{
+    --header-offset: 6rem; /* Altura aproximada del header fijo */
 }
 
 body{
@@ -20,6 +25,7 @@ body{
     overflow-x: hidden;
     background-color: black;
     color: white;
+    padding-top: var(--header-offset); /* Evitar que el header se superponga al primer contenido */
 }
 
 header{
@@ -98,8 +104,14 @@ nav a.active{
 }
 
 section{
-    min-height: 100vh;
-    padding: 5rem 9%; /* Reducido de 8rem a 5rem para disminuir el espacio vertical */
+    min-height: auto; /* No forzar altura completa; que se adapte al contenido */
+    padding: 4rem 9%; /* Espaciado vertical cómodo y consistente */
+    scroll-margin-top: var(--header-offset); /* Evitar que el header tape los títulos al navegar por anclas */
+}
+
+/* Pequeño margen entre secciones consecutivas */
+section + section{
+    margin-top: 2rem;
 }
 
 .home{
@@ -262,29 +274,35 @@ span{
     }
 }
 
-/* Ajustes adicionales para centrar y agrandar la sección de contacto */
+/* Ajustes Contacto: menos alto y sin espacio extra antes del footer */
 .contacto {
-    padding: 8rem 9%;
+    min-height: auto; /* Anula el min-height global del selector section */
+    padding: 2.5rem 9% 1.5rem; /* top | sides | bottom más compacto */
     background-color: black;
     color: white;
     text-align: center;
-    padding-bottom: 4rem; /* Reducido para disminuir el espacio antes del footer */
+    margin-bottom: 1.4rem; /* Pequeño margen antes del footer */
 }
 
 .contacto .titulo {
     font-size: 4rem;
     color: #b74b4b;
-    margin-bottom: 4rem;
+    margin-bottom: 1.8rem; /* Menos espacio bajo el título */
     font-weight: 700;
 }
 
 .contacto ul li {
     font-size: 2rem;
-    margin-bottom: 3rem;
+    margin-bottom: 1.2rem; /* Menos espacio entre ítems */
     color: white;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/* Evitar espacio extra bajo la última línea de contacto */
+.contacto ul li:last-child {
+    margin-bottom: 0;
 }
 
 .contacto ul li a {
@@ -305,7 +323,7 @@ span{
 
 /* Estilo para la sección de experiencia */
 .experience {
-    padding: 8rem 9%;
+    padding: 4rem 9%;
     background-color: black;
     color: white;
     text-align: center;
@@ -365,12 +383,13 @@ span{
     background-color: #161616;
     border: 1px solid #b74b4b;
     border-radius: 10px;
-    padding: 1rem;
+    padding: 1rem 1rem 3rem; /* espacio extra inferior para el icono */
     text-align: center;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     width: 100%;
     max-width: 300px;
+    position: relative; /* para poder posicionar el icono al fondo */
 }
 
 .projects-grid .card:hover {
@@ -409,9 +428,35 @@ span{
     font-size: 1rem; /* Mantengo el tamaño de los botones de lenguajes */
 }
 
+/* Tech tags más grandes y consistentes */
+.tech-tags {
+    margin-top: 1rem;
+}
+
+.tech-tag {
+    display: inline-block;
+    font-size: 1.1rem; /* más grande que 0.8rem */
+    color: #b74b4b;
+    margin: 4px 6px;
+    line-height: 1.6;
+}
+
+/* Icono de GitHub centrado en la parte inferior de la card */
+.github-icon {
+    position: absolute;
+    left: 50%;
+    bottom: 0.6rem;
+    transform: translateX(-50%);
+}
+
+.github-icon i {
+    font-size: 2.2rem;
+    color: white
+}
+
 /* Estilo para la sección de servicios */
 .services {
-    padding: 8rem 9%;
+    padding: 4rem 9%;
     background-color: black;
     color: white;
     text-align: center;
@@ -463,7 +508,7 @@ span{
 
 /* Estilo para la sección de habilidades */
 .skills {
-    padding: 8rem 9%;
+    padding: 4rem 9%;
     background-color: black;
     color: white;
     text-align: center;
