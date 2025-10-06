@@ -18,7 +18,7 @@
             <a href="#skills">Habilidades</a>
             <a href="#education">Educación</a>
             <a href="#projects" >Proyectos</a>
-            <a href="#contacto" >Contacto</a>
+            <a href="#contact" >Contacto</a>
         </nav>
     </header>
     <section class="home" id="home">
@@ -170,14 +170,10 @@
             </div>
         </div>
     </section>
-    <section class="contacto" id="contacto">
+    <section class="contacto" id="contact">
         <div class="contenedor">
             <h3 class="titulo">Contact</h3>
             <ul style="list-style: none; padding: 0;">
-                <li style="display: flex; align-items: center; justify-content: center; font-size: 2em; margin-bottom: 20px;">
-                    <i class="fas fa-phone" style="margin-right: 15px;"></i>
-                    <strong>Teléfono:</strong>&nbsp;&nbsp;<a href="tel:+34693788191">+34 693 78 81 91</a>
-                </li>
                 <li style="display: flex; align-items: center; justify-content: center; font-size: 2em; margin-bottom: 20px;">
                     <i class="fas fa-envelope" style="margin-right: 15px;"></i>
                     <strong>Email:</strong>&nbsp;&nbsp;<a href="mailto:bienvedoalto3@gmail.com">bienvedoalto3@gmail.com</a>
@@ -197,40 +193,70 @@
         </div>
     </footer>
         <script>
-        // Scrollspy sencillo: activa el link del menú según la sección visible
-        (function() {
-            const sections = Array.from(document.querySelectorAll('section[id]'));
-            const navLinks = Array.from(document.querySelectorAll('header nav a'));
-            const linkById = new Map(
-                navLinks
-                    .filter(a => a.hash && a.hash.startsWith('#'))
-                    .map(a => [a.hash.slice(1), a])
-            );
+        // Scrollspy robusto: resalta el link del menú según la sección bajo el header
+        (function () {
+            const header = document.querySelector('header');
+            const navLinks = Array.from(document.querySelectorAll('header nav a[href^="#"]'));
+            // Solo consideramos secciones que están enlazadas desde el menú
+            const sections = navLinks
+                .map(a => document.getElementById(a.getAttribute('href').slice(1)))
+                .filter(Boolean);
 
-            function setActive(id){
-                navLinks.forEach(a => a.classList.remove('active'));
-                const l = linkById.get(id);
-                if (l) l.classList.add('active');
+            // Mantener la variable CSS --header-offset en sincronía con la altura real del header
+            function syncHeaderOffsetVar() {
+                if (!header) return;
+                const h = header.offsetHeight;
+                document.documentElement.style.setProperty('--header-offset', h + 'px');
             }
 
-            // Usamos IntersectionObserver para detectar la sección principal en vista
-            const observer = new IntersectionObserver((entries) => {
-                const visible = entries
-                    .filter(e => e.isIntersecting)
-                    .sort((a,b) => b.intersectionRatio - a.intersectionRatio)[0];
-                if (visible) setActive(visible.target.id);
-            }, { threshold: [0.4, 0.6, 0.8] });
+            function setActive(id) {
+                navLinks.forEach(a => {
+                    const match = a.getAttribute('href') === '#' + id;
+                    a.classList.toggle('active', match);
+                });
+            }
 
-            sections.forEach(s => observer.observe(s));
+            let ticking = false;
+            function updateActive() {
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(() => {
+                    const offset = header ? header.offsetHeight : 0;
+                    const pos = window.scrollY + offset + 1; // +1 para incluir el borde superior
 
-            // Marcar activa al cargar
-            const initial = location.hash.slice(1);
-            if (initial && linkById.has(initial)) setActive(initial); else setActive('home');
+                    // Encontrar la sección cuyo rango [top, bottom) contiene pos
+                    let currentId = sections.length ? sections[0].id : '';
+                    for (const section of sections) {
+                        const top = section.offsetTop;
+                        const bottom = top + section.offsetHeight;
+                        if (pos >= top && pos < bottom) {
+                            currentId = section.id;
+                            break;
+                        }
+                        // Si ninguna coincide explícitamente, nos quedamos con la última que pasó de top
+                        if (pos >= top) currentId = section.id;
+                    }
 
-            // Actualizar activa al hacer click
-            navLinks.forEach(a => a.addEventListener('click', () => {
-                if (a.hash) setActive(a.hash.slice(1));
-            }));
+                    if (currentId) setActive(currentId);
+                    ticking = false;
+                });
+            }
+
+            // Eventos: scroll y resize para recalcular
+            window.addEventListener('scroll', updateActive, { passive: true });
+            window.addEventListener('resize', () => { syncHeaderOffsetVar(); updateActive(); });
+            document.addEventListener('DOMContentLoaded', () => { syncHeaderOffsetVar(); updateActive(); });
+            // Inicial
+            syncHeaderOffsetVar();
+            updateActive();
+
+            // Feedback inmediato al hacer click en los enlaces del menú
+            navLinks.forEach(a => {
+                a.addEventListener('click', () => {
+                    const id = a.getAttribute('href').slice(1);
+                    if (id) setActive(id);
+                });
+            });
         })();
         </script>
 </body>
