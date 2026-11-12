@@ -630,3 +630,16 @@ span{
     text-align: justify;
     margin-top: 1rem;
 }
+
+/* Apilar las cards de educación en pantallas estrechas para que el texto sea legible */
+@media (max-width: 900px) {
+    .education-grid {
+        flex-direction: column;
+    }
+
+    .education-grid .card {
+        width: 100% !important;
+        height: auto;
+        gap: 1rem;
+    }
+}
