@@ -4,356 +4,399 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de Bienvenido Doalto, estudiante de Ingeniería Informática: proyectos, habilidades, educación y contacto.">
+    <meta name="description" content="Bienvenido Doalto, estudiante de Ingeniería Informática (UEA · Erasmus en Zagreb): proyectos full-stack, sistemas e infraestructura.">
+    <meta name="theme-color" content="#000000">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500;600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Bienvenido Doalto | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css?v=5">
+    <script>document.documentElement.classList.add('js');</script>
+    <title>Bienvenido Doalto · Ingeniería Informática</title>
 </head>
+
 <body>
-    <header>
-        <a href="#" class="logo">Bienvenido Doalto</a>
+    <a class="skip" href="#main">Saltar al contenido</a>
 
-        <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
-            <i class="fa-solid fa-bars" aria-hidden="true"></i>
-        </button>
+    <header class="topbar">
+        <a href="#home" class="logo" aria-label="Inicio"><span class="logo-path">~/</span>bienve</a>
 
-        <nav id="menu">
-            <a href="#home">Inicio</a>
-            <a href="#services">Servicios</a>
-            <a href="#skills">Habilidades</a>
-            <a href="#education">Educación</a>
-            <a href="#projects">Proyectos</a>
-            <a href="#contact">Contacto</a>
+        <nav id="menu" aria-label="Secciones">
+            <a href="#home"><span>00</span>inicio</a>
+            <a href="#readme"><span>01</span>readme</a>
+            <a href="#projects"><span>02</span>proyectos</a>
+            <a href="#stack"><span>03</span>stack</a>
+            <a href="#log"><span>04</span>trayectoria</a>
+            <a href="#contact"><span>05</span>contacto</a>
         </nav>
+
+        <div class="topbar-right">
+            <a href="cv_bienvenido_doalto.pdf" download class="cv-link"><i class="fa-solid fa-arrow-down" aria-hidden="true"></i>cv.pdf</a>
+            <button class="menu-toggle" type="button" aria-label="Abrir menú" aria-expanded="false" aria-controls="menu">
+                <i class="fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
     </header>
-    <section class="home" id="home">
-        <div class="home-content">
-            <h1>Hola, soy <span>Bienve</span></h1>
-            <p class="typing-text" aria-label="Software Engineer, Developer, Web Designer"><span>Software Engineer</span></p>
-            <p>Soy un estudiante de tercer año de <strong>Ingeniería Informática en la Universidad Europea del Atlántico</strong>, actualmente de <strong>Erasmus en Algebra Bernays University (Zagreb)</strong>. Apasionado con el <strong>aprendizaje constante</strong> y siempre buscando nuevas maneras de <strong>ampliar mis habilidades en desarrollo web, estructuras de datos, POO,</strong> entre otros.</p>
-            <p><strong>Competitivo y ambicioso</strong> con un alto nivel de <strong>responsabilidad y compromiso</strong>. Amante de los <strong>deportes</strong> y <strong>videojuegos en equipo</strong> también. Busco oportunidades para poner en práctica mis conocimientos y colaborar en proyectos reales que me permitan crecer como desarrollador.</p>
-            <p>Emocionado por lo que el futuro me depara en el campo de la informática y listo para enfrentar <strong>nuevos desafíos</strong> y contribuir con mi <strong>entusiasmo y dedicación</strong>.</p>
-            <div class="home-actions">
-                <a href="cv_bienvenido_doalto.pdf" download class="btn"><i class="fa-solid fa-download" aria-hidden="true"></i>Descargar CV</a>
-                <div class="social-icons">
-                    <a href="https://github.com/Bienvee3" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
-                    <a href="https://www.linkedin.com/in/bienvenidodoalto" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
-                    <a href="https://twitter.com/Bienvee3" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
-                    <a href="https://www.instagram.com/bienvedc.3" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+
+    <main id="main">
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="home">
+            <div class="hero-meta mono">
+                <span><span class="dot" aria-hidden="true"></span>Abierto a oportunidades</span>
+                <span>45.81°N 15.98°E · Zagreb, HR</span>
+            </div>
+
+            <h1 class="hero-name">Bienvenido<br><span>Doalto</span><span class="caret" aria-hidden="true"></span></h1>
+
+            <div class="hero-grid">
+                <div class="hero-intro">
+                    <p class="hero-lead">Estudiante de <strong>Ingeniería Informática y Ciberseguridad</strong>. <strong>IA aplicada, automatización y código limpio</strong>. Apasionado por resolver <strong>problemas complejos</strong>.</p>
+                    <p class="hero-sub mono">// 3.º curso · UEA → Erasmus en Algebra Bernays University</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">Ver proyectos<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+                        <a href="cv_bienvenido_doalto.pdf" download class="btn btn-ghost"><i class="fa-solid fa-download" aria-hidden="true"></i>Descargar CV</a>
+                    </div>
+                    <div class="socials">
+                        <a href="https://github.com/Bienvee3" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github" aria-hidden="true"></i></a>
+                        <a href="https://www.linkedin.com/in/bienvenidodoalto" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a href="https://twitter.com/Bienvee3" target="_blank" rel="noopener" aria-label="X"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/bienvedc.3" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+
+                <!-- Terminal interactiva -->
+                <div class="terminal" id="terminal">
+                    <div class="win-bar">
+                        <span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+                        <span class="win-title mono">bienve@zagreb: ~</span>
+                        <span class="win-hint mono">bash</span>
+                    </div>
+                    <div class="term-body mono" id="term-body">
+                        <div class="term-out" id="term-out" aria-live="polite"></div>
+                        <form class="term-line" id="term-form" autocomplete="off">
+                            <label for="term-input" class="term-prompt"><span class="p-user">bienve@zagreb</span>:<span class="p-path">~</span>$</label>
+                            <input id="term-input" type="text" spellcheck="false" autocapitalize="off" aria-label="Escribe un comando (prueba help)">
+                        </form>
+                    </div>
+                    <div class="term-chips mono" aria-label="Comandos sugeridos">
+                        <button type="button" data-cmd="help">help</button>
+                        <button type="button" data-cmd="proyectos">proyectos</button>
+                        <button type="button" data-cmd="stack">stack</button>
+                        <button type="button" data-cmd="contacto">contacto</button>
+                    </div>
                 </div>
             </div>
-        </div>
-        <aside class="home-card">
-            <h2>En resumen</h2>
-            <ul>
-                <li>
-                    <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
-                    <div>
-                        <span class="dato-label">Ahora</span>
-                        <span class="dato-valor">Erasmus en Algebra Bernays University, Zagreb</span>
-                    </div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
-                    <div>
-                        <span class="dato-label">Estudios</span>
-                        <span class="dato-valor">3.º de Ingeniería Informática, Universidad Europea del Atlántico</span>
-                    </div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-code" aria-hidden="true"></i>
-                    <div>
-                        <span class="dato-label">Lenguajes</span>
-                        <span class="dato-valor">Java · Python · JavaScript · SQL</span>
-                    </div>
-                </li>
-                <li>
-                    <i class="fa-solid fa-language" aria-hidden="true"></i>
-                    <div>
-                        <span class="dato-label">Idiomas</span>
-                        <span class="dato-valor">Español · Inglés B2 · Francés B1</span>
-                    </div>
-                </li>
-            </ul>
-        </aside>
-    </section>
-    <section class="services" id="services">
-        <div class="contenedor">
-            <h2 class="titulo">Servicios</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <i class="fa-solid fa-code" aria-hidden="true"></i>
-                    <h3>Desarrollo Web</h3>
-                    <p>Creación de sitios web modernos, responsivos y optimizados para un rendimiento eficiente.</p>
+
+            <dl class="spec-strip">
+                <div><dt class="mono">ubicación</dt><dd>Zagreb, Croacia <span class="soft">· Erasmus</span></dd></div>
+                <div><dt class="mono">formación</dt><dd>Ingeniería Informática <span class="soft">· 3.º</span></dd></div>
+                <div><dt class="mono">especialización</dt><dd>Experto Univ. en Ciberseguridad</dd></div>
+                <div><dt class="mono">idiomas</dt><dd>ES <span class="soft">nativo</span> · EN <span class="soft">B2</span> · FR <span class="soft">B1</span></dd></div>
+            </dl>
+        </section>
+
+        <!-- ============ README ============ -->
+        <section class="section" id="readme">
+            <header class="sec-head reveal">
+                <span class="sec-idx mono">01</span>
+                <h2>Sobre mí</h2>
+                <span class="sec-path mono">~/README.md</span>
+            </header>
+
+            <div class="readme-grid">
+            <div class="editor reveal">
+                <div class="win-bar">
+                    <span class="tab mono"><i class="fa-brands fa-markdown" aria-hidden="true"></i>README.md</span>
+                    <span class="win-hint mono">UTF-8 · LF</span>
                 </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-database" aria-hidden="true"></i>
-                    <h3>Gestión de Bases de Datos</h3>
-                    <p>Diseño, implementación y mantenimiento de bases de datos para aplicaciones y sistemas.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-cogs" aria-hidden="true"></i>
-                    <h3>Automatización de Procesos</h3>
-                    <p>Optimización de flujos de trabajo mediante scripts personalizados y herramientas como Python.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-network-wired" aria-hidden="true"></i>
-                    <h3>Administración de Redes</h3>
-                    <p>Configuración y mantenimiento de redes informáticas para garantizar su seguridad y eficiencia.</p>
-                </div>
-                <div class="service-card">
-                    <i class="fa-solid fa-shield-alt" aria-hidden="true"></i>
-                    <h3>Ciberseguridad Básica</h3>
-                    <p>Implementación de medidas de seguridad para proteger sistemas y datos frente a amenazas comunes.</p>
+                <div class="editor-body">
+                    <p class="ln h"><span class="tok">#</span> Hola, soy Bienve</p>
+                    <p class="ln">Estudio <b>3.º de Ingeniería Informática</b> en la Universidad Europea del Atlántico y este cuatrimestre estoy de Erasmus en <b>Algebra Bernays University</b>, en Zagreb, cursando asignaturas de máster.</p>
+                    <p class="ln empty"></p>
+                    <p class="ln h2"><span class="tok">##</span> Cómo trabajo</p>
+                    <p class="ln li"><span class="tok">-</span> Aprendo construyendo: cada asignatura acaba convertida en un proyecto real en GitHub.</p>
+                    <p class="ln li"><span class="tok">-</span> Me interesa todo el recorrido: estructuras de datos, POO, backend, bases de datos y sistemas.</p>
+                    <p class="ln li"><span class="tok">-</span> Competitivo y ambicioso, con un alto nivel de <b>responsabilidad y compromiso</b>.</p>
+                    <p class="ln empty"></p>
+                    <p class="ln h2"><span class="tok">##</span> Fuera del código</p>
+                    <p class="ln">Deportes y videojuegos en equipo. Donde se aprende a coordinarse bajo presión.</p>
+                    <p class="ln empty"></p>
+                    <p class="ln quote"><span class="tok">&gt;</span> Busco un equipo donde aportar desde el primer día y seguir creciendo como desarrollador.</p>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="skills" id="skills">
-        <div class="contenedor">
-            <h2 class="titulo">Habilidades</h2>
-            <div class="skills-grid">
-                <div class="skill-card">
-                    <h3>Técnicas</h3>
-                    <ul class="chip-list">
-                        <li><i class="fa-brands fa-html5" aria-hidden="true"></i>HTML5</li>
-                        <li><i class="fa-brands fa-css3-alt" aria-hidden="true"></i>CSS</li>
-                        <li><i class="fa-brands fa-square-js" aria-hidden="true"></i>JavaScript</li>
-                        <li><i class="fa-brands fa-java" aria-hidden="true"></i>Java</li>
-                        <li><i class="fa-brands fa-python" aria-hidden="true"></i>Python</li>
-                        <li><i class="fa-solid fa-database" aria-hidden="true"></i>SQL</li>
-                        <li><i class="fa-brands fa-linux" aria-hidden="true"></i>Linux</li>
-                        <li><i class="fa-brands fa-github" aria-hidden="true"></i>GitHub</li>
-                        <li><i class="fa-solid fa-code" aria-hidden="true"></i>C, C++</li>
-                        <li><i class="fa-solid fa-people-group" aria-hidden="true"></i>Scrum</li>
+
+            <aside class="json reveal" aria-label="Perfil en formato JSON">
+                <div class="win-bar">
+                    <span class="tab mono"><i class="fa-solid fa-code" aria-hidden="true"></i>profile.json</span>
+                </div>
+<pre class="json-body mono"><code>{
+  <span class="jk">"name"</span>: <span class="js-s">"bienvenido-doalto"</span>,
+  <span class="jk">"version"</span>: <span class="js-s">"3.0.0"</span>, <span class="jc">// 3.º curso</span>
+  <span class="jk">"location"</span>: <span class="js-s">"Zagreb, HR"</span>,
+  <span class="jk">"university"</span>: <span class="js-s">"UEA"</span>,
+  <span class="jk">"exchange"</span>: <span class="js-s">"Algebra Bernays"</span>,
+  <span class="jk">"focus"</span>: [
+    <span class="js-s">"backend"</span>, <span class="js-s">"web"</span>,
+    <span class="js-s">"sistemas"</span>, <span class="js-s">"ciberseguridad"</span>
+  ],
+  <span class="jk">"languages"</span>: {
+    <span class="jk">"es"</span>: <span class="js-s">"nativo"</span>,
+    <span class="jk">"en"</span>: <span class="js-s">"B2"</span>,
+    <span class="jk">"fr"</span>: <span class="js-s">"B1"</span>
+  },
+  <span class="jk">"openToWork"</span>: <span class="jb">true</span>
+}</code></pre>
+            </aside>
+            </div>
+        </section>
+
+        <!-- ============ PROYECTOS ============ -->
+        <section class="section" id="projects">
+            <header class="sec-head reveal">
+                <span class="sec-idx mono">02</span>
+                <h2>Proyectos</h2>
+                <span class="sec-path mono">~/proyectos · 3 repos</span>
+            </header>
+
+            <article class="project reveal">
+                <div class="project-info">
+                    <p class="project-id mono">P-01 <span>/ full-stack</span></p>
+                    <h3>Sports League Management</h3>
+                    <p class="project-desc">Aplicación web multicapa para gestionar ligas deportivas de principio a fin, con la lógica de competición resuelta en el servidor.</p>
+                    <ul class="features">
+                        <li>Generación de calendarios <b>round-robin</b></li>
+                        <li>Clasificaciones con <b>criterios de desempate</b></li>
+                        <li>Correcciones de resultados <b>auditadas</b></li>
+                        <li>Crónicas de partido bilingües generadas con <b>IA</b></li>
                     </ul>
+                    <dl class="spec">
+                        <div><dt class="mono">stack</dt><dd class="mono">Java · Spring Boot · PostgreSQL · Thymeleaf · Docker</dd></div>
+                        <div><dt class="mono">repo</dt><dd><a class="repo mono" href="https://github.com/Bienvee3/SportsLeagueManagement" target="_blank" rel="noopener">Bienvee3/SportsLeagueManagement<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></dd></div>
+                    </dl>
                 </div>
-                <div class="skill-card">
-                    <h3>Blandas</h3>
-                    <ul class="icon-list">
-                        <li><i class="fa-solid fa-users" aria-hidden="true"></i>Trabajo en equipo</li>
-                        <li><i class="fa-solid fa-comments" aria-hidden="true"></i>Comunicación efectiva</li>
-                        <li><i class="fa-solid fa-lightbulb" aria-hidden="true"></i>Resolución de problemas</li>
-                        <li><i class="fa-solid fa-arrows-rotate" aria-hidden="true"></i>Adaptabilidad</li>
-                        <li><i class="fa-solid fa-clock" aria-hidden="true"></i>Gestión del tiempo</li>
+                <a class="project-visual browser" href="https://github.com/Bienvee3/SportsLeagueManagement" target="_blank" rel="noopener" aria-label="Ver Sports League Management en GitHub">
+                    <div class="win-bar"><span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url mono">localhost:8080/leagues</span></div>
+                    <img src="img/sportsleague.png" alt="Clasificación de una temporada en Sports League Management" loading="lazy">
+                </a>
+            </article>
+
+            <article class="project reveal">
+                <div class="project-info">
+                    <p class="project-id mono">P-02 <span>/ tiempo real</span></p>
+                    <h3>Agent Manager</h3>
+                    <p class="project-desc">Panel local para supervisar agentes de IA: una oficina pixel-art en el navegador con un puesto por agente.</p>
+                    <ul class="features">
+                        <li>Estado de cada agente <b>en vivo</b> vía WebSockets</li>
+                        <li><b>Aprobación humana</b> de acciones sensibles</li>
+                        <li>Interfaz de <b>terminal</b> integrada</li>
                     </ul>
+                    <dl class="spec">
+                        <div><dt class="mono">stack</dt><dd class="mono">Python · FastAPI · WebSockets · JavaScript</dd></div>
+                        <div><dt class="mono">repo</dt><dd><a class="repo mono" href="https://github.com/Bienvee3/AgentManager" target="_blank" rel="noopener">Bienvee3/AgentManager<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></dd></div>
+                    </dl>
                 </div>
-                <div class="skill-card">
-                    <h3>Idiomas</h3>
-                    <ul class="level-list">
-                        <li>Español <span class="level">Nativo</span></li>
-                        <li>Inglés <span class="level">B2</span></li>
-                        <li>Francés <span class="level">B1</span></li>
+                <a class="project-visual browser" href="https://github.com/Bienvee3/AgentManager" target="_blank" rel="noopener" aria-label="Ver Agent Manager en GitHub">
+                    <div class="win-bar"><span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url mono">localhost:8000</span></div>
+                    <img src="img/agentmanager.png" alt="Oficina pixel-art de Agent Manager con el estado de cada agente" loading="lazy">
+                </a>
+            </article>
+
+            <article class="project reveal">
+                <div class="project-info">
+                    <p class="project-id mono">P-03 <span>/ investigación</span></p>
+                    <h3>Benchmark VM vs Docker</h3>
+                    <p class="project-desc">Estudio comparativo del coste real de virtualizar frente a containerizar, usando un servidor de Snake como carga de trabajo.</p>
+                    <ul class="features">
+                        <li>Impacto medido en <b>CPU, memoria y E/S</b></li>
+                        <li>Pruebas automatizadas con <b>scripts Bash</b></li>
+                        <li>Análisis del <b>overhead</b> en Jupyter para decidir dónde desplegar</li>
                     </ul>
+                    <dl class="spec">
+                        <div><dt class="mono">stack</dt><dd class="mono">Docker · VirtualBox · Linux · Bash · Python</dd></div>
+                        <div><dt class="mono">repo</dt><dd><a class="repo mono" href="https://github.com/Bienvee3/Benchmarks-VM-vs-Docker" target="_blank" rel="noopener">Bienvee3/Benchmarks-VM-vs-Docker<i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i></a></dd></div>
+                    </dl>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section class="education" id="education">
-        <div class="contenedor">
-            <h2 class="titulo">Educación</h2>
-            <div class="education-grid">
-                <div class="card">
-                    <div class="edu-logo"><img src="img/marquessantillanainsti.png" alt="IES Marqués de Santillana"></div>
-                    <h3>IES Marqués de Santillana</h3>
-                    <p class="edu-meta">Educación secundaria</p>
-                    <p>Aquí inicié mis estudios en programación, aprendiendo los fundamentos de HTML, CSS y Excel. Este centro fue el punto de partida para mi pasión por la tecnología y el desarrollo web. Durante mi tiempo aquí, también participé en proyectos escolares que fomentaron mi interés por la resolución de problemas y el trabajo en equipo.</p>
-                </div>
-                <div class="card">
-                    <div class="edu-logo"><img src="img/uniatlantico.png" alt="Universidad Europea del Atlántico"></div>
-                    <h3>Universidad Europea del Atlántico</h3>
-                    <p class="edu-meta">Ingeniería Informática</p>
-                    <p>Actualmente estoy cursando el tercer año de Ingeniería Informática, cuyo primer cuatrimestre estoy realizando en Erasmus en Zagreb. En esta universidad he profundizado en estructuras de datos, programación orientada a objetos y desarrollo web, y he colaborado en proyectos interdisciplinarios que me han permitido aplicar mis conocimientos en situaciones reales.</p>
-                </div>
-                <div class="card">
-                    <div class="edu-logo"><img src="img/algebra.png" alt="Algebra Bernays University"></div>
-                    <h3>Algebra Bernays University</h3>
-                    <p class="edu-meta">Erasmus · Zagreb, Croacia</p>
-                    <p>Estudiante de Erasmus durante el primer cuatrimestre de mi tercer año de carrera. Aquí curso el primer año de un máster, con asignaturas como desarrollo Java con frameworks, DevOps aplicado, gestión de ciberseguridad y algoritmos de optimización.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="projects" id="projects">
-        <div class="contenedor">
-            <h2 class="titulo">Proyectos</h2>
-            <div class="projects-grid">
-                <a class="card" href="https://github.com/Bienvee3/Benchmarks-VM-vs-Docker" target="_blank" rel="noopener">
-                    <div class="card-img"><img src="img/snake.png" alt="Benchmark VM vs Docker"></div>
-                    <div class="card-body">
-                        <h3>Benchmark VM vs Docker</h3>
-                        <p>Un proyecto que compara el rendimiento entre máquinas virtuales y contenedores Docker, utilizando un servidor Snake como caso de estudio.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Jupyter Notebook</span>
-                            <span class="tech-tag">Dockerfile</span>
-                            <span class="tech-tag">Shell</span>
-                            <span class="tech-tag">HTML</span>
+                <a class="project-visual arch" href="https://github.com/Bienvee3/Benchmarks-VM-vs-Docker" target="_blank" rel="noopener" aria-label="Ver Benchmark VM vs Docker en GitHub">
+                    <div class="win-bar"><span class="win-dots" aria-hidden="true"><i></i><i></i><i></i></span><span class="url mono">arquitectura.md</span></div>
+                    <div class="arch-body mono" role="img" aria-label="Comparativa de capas: la máquina virtual añade hipervisor y sistema operativo invitado; el contenedor comparte el kernel del host a través de Docker Engine">
+                        <div class="arch-col">
+                            <p class="arch-label">máquina virtual</p>
+                            <span class="layer app">snake-server</span>
+                            <span class="layer">libs / runtime</span>
+                            <span class="layer extra">SO invitado</span>
+                            <span class="layer extra">hipervisor</span>
+                            <span class="layer base">SO host</span>
+                            <span class="layer base">hardware</span>
                         </div>
-                        <span class="github-link"><i class="fa-brands fa-github" aria-hidden="true"></i>Ver en GitHub<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
-                    </div>
-                </a>
-                <a class="card" href="https://github.com/Bienvee3/SportsLeagueManagement" target="_blank" rel="noopener">
-                    <div class="card-img"><img src="img/sportsleague.png" alt="Sports League Management"></div>
-                    <div class="card-body">
-                        <h3>Sports League Management</h3>
-                        <p>Aplicación web multicapa para gestionar ligas deportivas: calendarios round-robin, clasificaciones con desempates, correcciones de resultados auditadas y crónicas de partido bilingües generadas con IA.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Java</span>
-                            <span class="tech-tag">Spring Boot</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Thymeleaf</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">Docker</span>
+                        <div class="arch-vs">vs</div>
+                        <div class="arch-col">
+                            <p class="arch-label">contenedor</p>
+                            <span class="layer app">snake-server</span>
+                            <span class="layer">libs / runtime</span>
+                            <span class="layer engine">docker engine</span>
+                            <span class="layer base">SO host · kernel compartido</span>
+                            <span class="layer base">hardware</span>
                         </div>
-                        <span class="github-link"><i class="fa-brands fa-github" aria-hidden="true"></i>Ver en GitHub<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                        <p class="arch-note">métricas: cpu · memoria · e/s</p>
                     </div>
                 </a>
-                <a class="card" href="https://github.com/Bienvee3/AgentManager" target="_blank" rel="noopener">
-                    <div class="card-img"><img src="img/agentmanager.png" alt="Agent Manager"></div>
-                    <div class="card-body">
-                        <h3>Agent Manager</h3>
-                        <p>Panel local para supervisar agentes de IA: una oficina pixel-art en el navegador con un puesto por agente, estado en vivo, aprobación de acciones y una interfaz de terminal.</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">FastAPI</span>
-                            <span class="tech-tag">WebSockets</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
+            </article>
+        </section>
+
+        <!-- ============ STACK ============ -->
+        <section class="section" id="stack">
+            <header class="sec-head reveal">
+                <span class="sec-idx mono">03</span>
+                <h2>Stack</h2>
+                <span class="sec-path mono">~/stack.yml</span>
+            </header>
+
+            <div class="stack-grid">
+                <ol class="areas reveal">
+                    <li><span class="mono">01</span><div><h3>Desarrollo web</h3><p>Aplicaciones multicapa responsivas, del modelo de datos a la interfaz.</p></div></li>
+                    <li><span class="mono">02</span><div><h3>Bases de datos</h3><p>Diseño relacional, implementación y mantenimiento.</p></div></li>
+                    <li><span class="mono">03</span><div><h3>Automatización</h3><p>Scripts en Python y Bash para quitar trabajo repetitivo.</p></div></li>
+                    <li><span class="mono">04</span><div><h3>Sistemas y redes</h3><p>Linux, virtualización, contenedores y configuración de redes.</p></div></li>
+                    <li><span class="mono">05</span><div><h3>Ciberseguridad</h3><p>Medidas para proteger sistemas y datos frente a amenazas comunes.</p></div></li>
+                </ol>
+
+                <div class="stack-table reveal">
+                    <div class="stack-row head mono"><span>clave</span><span>valores</span><span>usado en</span></div>
+                    <div class="stack-row">
+                        <span class="k mono">lenguajes</span>
+                        <span class="v"><i>Java</i><i>Python</i><i>JavaScript</i><i>C / C++</i><i>SQL</i><i>Bash</i></span>
+                        <span class="u mono"><a href="#projects">P-01</a><a href="#projects">P-02</a><a href="#projects">P-03</a></span>
+                    </div>
+                    <div class="stack-row">
+                        <span class="k mono">backend</span>
+                        <span class="v"><i>Spring Boot</i><i>FastAPI</i><i>WebSockets</i><i>Thymeleaf</i></span>
+                        <span class="u mono"><a href="#projects">P-01</a><a href="#projects">P-02</a></span>
+                    </div>
+                    <div class="stack-row">
+                        <span class="k mono">datos</span>
+                        <span class="v"><i>PostgreSQL</i><i>Modelo relacional</i><i>Jupyter</i></span>
+                        <span class="u mono"><a href="#projects">P-01</a><a href="#projects">P-03</a></span>
+                    </div>
+                    <div class="stack-row">
+                        <span class="k mono">infra</span>
+                        <span class="v"><i>Docker</i><i>Linux</i><i>VirtualBox</i><i>VMware</i><i>Redes</i></span>
+                        <span class="u mono"><a href="#projects">P-01</a><a href="#projects">P-03</a></span>
+                    </div>
+                    <div class="stack-row">
+                        <span class="k mono">frontend</span>
+                        <span class="v"><i>HTML</i><i>CSS</i><i>JavaScript</i></span>
+                        <span class="u mono"><a href="#projects">P-01</a><a href="#projects">P-02</a></span>
+                    </div>
+                    <div class="stack-row">
+                        <span class="k mono">proceso</span>
+                        <span class="v"><i>Git</i><i>GitHub</i><i>Scrum</i></span>
+                        <span class="u mono">todos</span>
+                    </div>
+                    <p class="stack-soft mono"><span class="tok">#</span> además: trabajo en equipo · comunicación · resolución de problemas · adaptabilidad · gestión del tiempo</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ TRAYECTORIA ============ -->
+        <section class="section" id="log">
+            <header class="sec-head reveal">
+                <span class="sec-idx mono">04</span>
+                <h2>Trayectoria</h2>
+                <span class="sec-path mono">$ git log --graph</span>
+            </header>
+
+            <ol class="gitlog">
+                <li class="commit branch reveal">
+                    <div class="graph" aria-hidden="true"><span class="node"></span></div>
+                    <div class="commit-body">
+                        <p class="commit-meta mono"><span class="hash">e7a2f19</span><span class="ref head">HEAD → erasmus</span><span class="date">2026</span></p>
+                        <div class="commit-main">
+                            <span class="logo-tile"><img src="img/algebra.png" alt="" loading="lazy"></span>
+                            <div>
+                                <h3>Algebra Bernays University</h3>
+                                <p class="commit-sub mono">Erasmus · Zagreb, Croacia</p>
+                            </div>
                         </div>
-                        <span class="github-link"><i class="fa-brands fa-github" aria-hidden="true"></i>Ver en GitHub<i class="fa-solid fa-arrow-right" aria-hidden="true"></i></span>
+                        <p>Primer cuatrimestre de 3.º cursando asignaturas de primer año de máster: desarrollo Java con frameworks, DevOps aplicado, gestión de ciberseguridad y algoritmos de optimización.</p>
                     </div>
-                </a>
+                </li>
+                <li class="commit merge-from reveal">
+                    <div class="graph" aria-hidden="true"><span class="node"></span></div>
+                    <div class="commit-body">
+                        <p class="commit-meta mono"><span class="hash">4c19b0d</span><span class="ref">main</span><span class="date">2024 — hoy</span></p>
+                        <div class="commit-main">
+                            <span class="logo-tile"><img src="img/uniatlantico.png" alt="" loading="lazy"></span>
+                            <div>
+                                <h3>Universidad Europea del Atlántico</h3>
+                                <p class="commit-sub mono">Grado en Ingeniería Informática + Experto Univ. en Ciberseguridad</p>
+                            </div>
+                        </div>
+                        <p>Estructuras de datos, programación orientada a objetos y desarrollo web, aplicados en proyectos interdisciplinarios con casos reales.</p>
+                    </div>
+                </li>
+                <li class="commit root reveal">
+                    <div class="graph" aria-hidden="true"><span class="node"></span></div>
+                    <div class="commit-body">
+                        <p class="commit-meta mono"><span class="hash">0a1f3c2</span><span class="ref init">init</span><span class="date">2022 — 2024</span></p>
+                        <div class="commit-main">
+                            <span class="logo-tile"><img src="img/marquessantillanainsti.png" alt="" loading="lazy"></span>
+                            <div>
+                                <h3>IES Marqués de Santillana</h3>
+                                <p class="commit-sub mono">Bachillerato Tecnológico</p>
+                            </div>
+                        </div>
+                        <p>Primer contacto con la programación (HTML, CSS) y el punto de partida de mi interés por la tecnología, la resolución de problemas y el trabajo en equipo.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- ============ CONTACTO ============ -->
+        <section class="section contact" id="contact">
+            <header class="sec-head reveal">
+                <span class="sec-idx mono">05</span>
+                <h2>Contacto</h2>
+                <span class="sec-path mono">~/contacto</span>
+            </header>
+
+            <div class="contact-grid reveal">
+                <div>
+                    <p class="contact-title">¿Construimos algo juntos?</p>
+                    <p class="contact-text">Prácticas, proyectos o una conversación sobre tecnología: respondo rápido.</p>
+                    <div class="email-cmd mono">
+                        <span class="soft">$ echo $EMAIL</span>
+                        <div class="email-row">
+                            <a href="mailto:bienvedoalto3@gmail.com">bienvedoalto3@gmail.com</a>
+                            <button type="button" class="copy-btn" data-copy="bienvedoalto3@gmail.com"><i class="fa-regular fa-copy" aria-hidden="true"></i><span>copiar</span></button>
+                        </div>
+                    </div>
+                </div>
+                <ul class="contact-links">
+                    <li><a href="https://github.com/Bienvee3" target="_blank" rel="noopener"><i class="fa-brands fa-github" aria-hidden="true"></i><span>GitHub</span><span class="mono soft">/Bienvee3</span><i class="fa-solid fa-arrow-right arrow" aria-hidden="true"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/bienvenidodoalto" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i><span>LinkedIn</span><span class="mono soft">/bienvenidodoalto</span><i class="fa-solid fa-arrow-right arrow" aria-hidden="true"></i></a></li>
+                    <li><a href="https://twitter.com/Bienvee3" target="_blank" rel="noopener"><i class="fa-brands fa-x-twitter" aria-hidden="true"></i><span>X</span><span class="mono soft">@Bienvee3</span><i class="fa-solid fa-arrow-right arrow" aria-hidden="true"></i></a></li>
+                    <li><a href="cv_bienvenido_doalto.pdf" download><i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i><span>Currículum</span><span class="mono soft">cv.pdf</span><i class="fa-solid fa-arrow-right arrow" aria-hidden="true"></i></a></li>
+                </ul>
             </div>
-        </div>
-    </section>
-    <section class="contacto" id="contact">
-        <div class="contenedor">
-            <h2 class="titulo">Contacto</h2>
-            <div class="contacto-links">
-                <a class="contacto-link" href="mailto:bienvedoalto3@gmail.com">
-                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
-                    <div>
-                        <span class="dato-label">Email</span>
-                        <span class="dato-valor">bienvedoalto3@gmail.com</span>
-                    </div>
-                </a>
-                <a class="contacto-link" href="https://www.linkedin.com/in/bienvenidodoalto" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
-                    <div>
-                        <span class="dato-label">LinkedIn</span>
-                        <span class="dato-valor">linkedin.com/in/bienvenidodoalto</span>
-                    </div>
-                </a>
-                <a class="contacto-link" href="https://github.com/Bienvee3" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-github" aria-hidden="true"></i>
-                    <div>
-                        <span class="dato-label">GitHub</span>
-                        <span class="dato-valor">github.com/Bienvee3</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
-    <footer class="footer">
-        <p>&copy; 2026 Bienvenido Doalto</p>
+        </section>
+    </main>
+
+    <footer class="footer mono">
+        <span>© 2026 Bienvenido Doalto</span>
+        <span class="soft">HTML · CSS · JS, sin frameworks</span>
     </footer>
-    <script>
-        // Scrollspy: resalta el link del menú según la sección bajo el header
-        (function () {
-            const header = document.querySelector('header');
-            const navLinks = Array.from(document.querySelectorAll('header nav a[href^="#"]'));
-            // Solo consideramos secciones que están enlazadas desde el menú
-            const sections = navLinks
-                .map(a => document.getElementById(a.getAttribute('href').slice(1)))
-                .filter(Boolean);
 
-            // Mantener la variable CSS --header-offset en sincronía con la altura real del header
-            function syncHeaderOffsetVar() {
-                if (!header) return;
-                document.documentElement.style.setProperty('--header-offset', header.offsetHeight + 'px');
-            }
+    <!-- Barra de estado estilo editor -->
+    <div class="statusbar mono" aria-hidden="true">
+        <span class="sb-mode">NORMAL</span>
+        <span class="sb-path" id="sb-path">~/inicio</span>
+        <span class="sb-spacer"></span>
+        <span class="sb-item"><span class="dot"></span>disponible</span>
+        <span class="sb-item">es-ES</span>
+        <span class="sb-item" id="sb-clock">Zagreb --:--</span>
+    </div>
 
-            function setActive(id) {
-                navLinks.forEach(a => {
-                    a.classList.toggle('active', a.getAttribute('href') === '#' + id);
-                });
-            }
-
-            let ticking = false;
-            function updateActive() {
-                if (ticking) return;
-                ticking = true;
-                requestAnimationFrame(() => {
-                    const offset = header ? header.offsetHeight : 0;
-                    const pos = window.scrollY + offset + 1; // +1 para incluir el borde superior
-
-                    let currentId = sections.length ? sections[0].id : '';
-                    for (const section of sections) {
-                        if (pos >= section.offsetTop) currentId = section.id;
-                    }
-                    // La última sección es más baja que la ventana: se activa al llegar al final de la página
-                    const atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2;
-                    if (atBottom && sections.length) currentId = sections[sections.length - 1].id;
-
-                    if (currentId) setActive(currentId);
-                    ticking = false;
-                });
-            }
-
-            window.addEventListener('scroll', updateActive, { passive: true });
-            window.addEventListener('resize', () => { syncHeaderOffsetVar(); updateActive(); });
-            syncHeaderOffsetVar();
-            updateActive();
-
-            // Menú móvil
-            const nav = document.querySelector('header nav');
-            const toggle = document.querySelector('.menu-toggle');
-            function setMenu(open) {
-                nav.classList.toggle('active', open);
-                toggle.setAttribute('aria-expanded', String(open));
-                toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
-                toggle.firstElementChild.className = open ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
-            }
-            toggle.addEventListener('click', () => setMenu(!nav.classList.contains('active')));
-
-            // Feedback inmediato al hacer click en los enlaces del menú
-            navLinks.forEach(a => {
-                a.addEventListener('click', () => {
-                    setActive(a.getAttribute('href').slice(1));
-                    setMenu(false);
-                });
-            });
-        })();
-
-        // Efecto de escritura del subtítulo
-        (function () {
-            const el = document.querySelector('.typing-text span');
-            if (!el || window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-            const words = ['Software Engineer', 'Developer', 'Web Designer'];
-            let word = 0;
-            let length = words[0].length;
-            let deleting = true;
-
-            function tick() {
-                length += deleting ? -1 : 1;
-                el.textContent = words[word].slice(0, length);
-                let delay = deleting ? 45 : 90;
-                if (!deleting && length === words[word].length) {
-                    deleting = true;
-                    delay = 1800;
-                } else if (deleting && length === 0) {
-                    deleting = false;
-                    word = (word + 1) % words.length;
-                    delay = 350;
-                }
-                setTimeout(tick, delay);
-            }
-            setTimeout(tick, 1800);
-        })();
-    </script>
+    <script src="js/main.js?v=5"></script>
 </body>
+
 </html>
